@@ -1,0 +1,208 @@
+<html !DOCTYPE>
+<html>
+  <head>
+  <meta charset ='utf-8'>
+    <title>FormValidation</title>
+	<style>
+	    h1
+		{
+			font-family:sans serif;
+			color:black;
+			text-align:center;
+			background-color:lightcoral;
+			border-radius:55px;
+		}
+		body
+		{
+			background-color:white;
+		}
+	  	  label{
+	     font-size:20px;
+	     width:30%;
+		 display:inline-block;
+	  }
+	  .cont{
+			 border: 2px solid #FADA5E;
+			 width: 30%;
+			  margin-top: 100px;;
+			  margin-left: 500px;;
+			  background-color:white;
+			box-shadow:4px 4px 2px rgba(254,236,164,1);
+ 	  }
+	  
+	  .cont input{
+	    height:40px;
+	    width:200px;
+	  }
+	  .cont select{
+	    height:40px;
+	    width:200px;
+	  }
+	  .button{
+	    
+		margin:none;
+		border:0px;
+		margin-top:10px;
+		padding:20px;
+		text-align:center;
+		width:100%;
+		background-color:lightcoral;
+		text-transform:uppercase;
+		letter-spacing:5px;
+
+		font-weight:bold;
+		border-radius:25px;
+		cursor:pointer;
+	  }
+	  .cont label:after {
+            content: "*";
+            font-weight: bold;
+            color: red;
+        }
+		form{
+		  
+		margin: 45px;
+		padding: 15px;
+        
+		}
+		#first{
+		  color:red;
+		}
+		input:invalid
+            {
+                border-color: red;
+            }
+	
+	    input:valid
+            {
+                border-color: green;
+            }
+			
+       
+	</style>
+  </head>
+    <body>
+	<h1>CONTACT US</h1>
+	 <div class='cont'>
+	    
+	 <form action='#' id="myfrm" name="myform" method="post"  onsubmit="return validation(myform)">
+	
+	    
+		<label id='uname'>First Name:</label>
+	    <input type='text' id="uname" name="fi" class="elaki" pattern="^[A-Za-z -]{4,20}$" onblur="validateFname()" required>
+		<br><br>
+		
+		<label id='lname'>Last Name:</label>
+	    <input type='text' name ='l' id='lname'  pattern="^[A-Za-z -]{4,20}$"  onblur="validateLname()" required>
+		<br>
+		<small id='first'> </small>
+		<br><br>
+		
+		
+		
+		
+		
+		
+		<label id='phone'>Telephone:</label>
+	    <input type='tel' id='phone' name="t" pattern="[1-9][0-9]{9}" onblur="validateMobileno()" required>
+		<br><br>
+		<br>
+		
+		
+		
+		
+	    
+		
+		<label id='ename'>Email:</label>
+	    <input type='email' id='ename' name="em" required>
+		<br><br>
+		  <div class="button">
+		    <input type="submit" value="Continue">
+			</div>
+		 <!--<a href="submit.html" id="submit">SUBMIT</a>-->
+		<br><br>
+	
+		
+	  </form>
+	  </div>
+	  <script>
+	  //var u = document.getElementById("fname").value;
+	      function validation(myform)
+		  {
+		    var u= myform.fi.value;
+			var l= myform.l.value;
+			var te= myform.t.value;
+			var e= myform.em.value;
+			
+			
+			document.write('<html><style> h1{background-color:#FADA5E;}h3{font-size:25px;font-family:ariel;}.more{padding:10px;border:none;outline:none;border-radius:50px;font-size:20px;cursor:pointer;background-color:#E8A317;}img{width:1458px;height:300px}')
+			document.write('</style>');
+			document.write('<body><center>')
+			document.write('<img src="img21.png">');
+			document.write('<h1>')
+			document.write("Welcome"+ " "+u+" "+" You are contact request are reported");
+			
+			//document.write("Welcome"+ " " +name+ " " + " You are successfully logined");
+			document.write('</h1>');
+			document.write('<h3>')
+		    document.write("FIRST NAME:" + u+'<br>'+"LAST NAME:"+l+'<br>'+"PHONE NUMBER:"+te+'<br>'+"EMAIL ID:"+e);
+			
+		document.write('</h3>');
+
+			
+			document.write('<br><a href="menu.html"><button class="more" type="submit">')
+			document.write("Try Chalo");
+			document.write('</button></a>');
+			
+			document.write('</center></body></html>');
+		  }
+	      function validateFname()
+		  {
+		     var firstname = document.getElementById("fname");
+			 if(firstname.validity.patternMismatch) //Checking for pattern mismatch. This patternMismatch property can be used only if pattern attribute is set in the element
+                //if(!firstname.validity.valid) //This can also be used
+                { 
+                    firstname.setCustomValidity("This field requires minimum 4 alphabets"); //Setting the custom message
+                    firstname.reportValidity(); //Makes the validation message display
+                    //document.getElementsByClassName("para2")[0].innerHTML=firstname.validationMessage;
+                    //To display the validation Message in a tag. Uncomment and try
+                }
+                else
+				{
+				    firstname.setCustomValidity(""); //if false, set the custom message to an empty string
+				} 
+		  }
+		  function validateLname()
+		  {
+		     var lastname = document.getElementById("lname");
+		    if(lastname.validity.patternMismatch)
+                { 
+                    lastname.setCustomValidity("This field requires minimum 4 alphabets");
+				    lastname.reportValidity();
+                }
+                else
+				{
+				    lastname.setCustomValidity(""); 
+				}
+		  }
+		 
+		 function validateMobileno()
+            {
+                var mobile=document.getElementById("phone");
+                if(mobile.validity.patternMismatch)
+                {
+                    mobile.setCustomValidity("This field requires 10 digits");
+				    mobile.reportValidity();
+                }
+                else
+                {
+                    mobile.setCustomValidity("");
+                }
+            }
+       	   
+		 
+		    
+		</script>
+	</body>
+
+</html>

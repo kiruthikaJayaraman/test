@@ -1,0 +1,117 @@
+<html !DOCTYPE>
+<html>
+  <head>
+  <meta charset ='utf-8'>
+    <title>FormValidation</title>
+	<style>
+	  	  label{
+	  
+	     width:30%;
+		 display:inline-block;
+	  }
+	  .cont{
+	     font-size:25px;
+	     margin-top:40px;
+	     margin-left:400px;
+		 margin-right:200px;
+	
+	     border:2px solid black;
+	     border-radius:10px;
+		 background-color:#E5E4E2;
+		 color:black;
+		 width:800px;
+		 padding:4px;
+	  }
+	  .cont input{
+	    height:40px;
+	    width:300px;
+	  }
+	  .cont select{
+	    height:40px;
+	    width:300px;
+	  }
+	  .cont button{
+	    width:100px;
+	    margin-left:300px;
+	  }
+	  
+	  .cont label:after {
+            content: "*";
+            font-weight: bold;
+            color: red;
+        }
+		#first{
+		  color:red;
+		}
+		input:invalid
+            {
+                border-color: red;
+            }
+	
+	    input:valid
+            {
+                border-color: green;
+            }
+	</style>
+  </head>
+    <body>
+	 <div class='cont'>
+	    <p></p>
+	<script>
+	  document.getElementsByTagName("p")[0].innerHTML=" * Denotes required field";
+	  document.getElementsByTagName("p")[0].style.color='red';
+	  document.getElementsByTagName("p")[0].style.textAlign='right';
+	  </script>
+	 <form action='#' name="myform" onsubmit='return(validation())'>
+	 <label id='ename'>Email:</label>
+	    <input type='email' id='ename' name="em" required>
+		<br><br>
+	    
+		<label id='uname'>Password:</label>
+	    <input type='password' id='uname' name="fi"   required>
+		<br><br>
+		
+		<label id='lname'>Confirm Password:</label>
+	    <input type='password' name ='l' id='lname'  required>
+		<br>
+		
+		<br><br>
+		
+		<button  type="submit"> Login</button>
+		<br>
+	
+		
+	  </form>
+	  </div>
+	  <script>
+	      
+		
+		function validation()
+            {
+                
+				if(document.myform.l.value !== document.myform.f.value)
+			  {
+			alert("Same input expected for Last Name and Father Name");
+			document.myform.l.focus() ;
+			return false;
+			}
+			else{
+			  
+			  alert("Successfully submitted!!");
+			}
+				
+                /*if(uname.checkValidity() && lname.checkValidity() && fname.checkValidity() && birth.checkValidity() 
+				&& phone.checkValidity() && sname.checkValidity() && area.checkValidity() && loc.checkValidity() 
+				&& ename.checkValidity())
+                //Checking validity for all the fields. Form will not be submitted unless all of them are true.
+                    {
+                        alert("Successfully submitted!!");
+					    return  false;
+                    }*/
+            }   
+		 
+		    
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	      <title>Route</title>
+		  <style>
+		      .busgrp button
+			  {
+			    background-color:#E8A317;
+				border:1px solid black;
+				color:black;
+				padding:10px 20px;
+				cursor:pointer;
+				width:100%;
+				display:block;
+			  }
+			  .busgrp button:not(:last-child)
+			  {
+			    border-bottom:none;
+			  }
+			  .busImg
+			  {
+			    display:block;
+				margin-left:auto;
+				margin-right:auto;
+				width:50%;
+				animation:blinker 1.5s linear infinite;
+			  }
+			@keyframes blinker
+			{
+			 50%{
+			     opacity:0;
+				}
+			}
+			  #footer
+			  {
+			    border:2px solid black;
+				padding:5px;
+			    color:white;
+				background-color:#E8A317;
+			  }
+			  #back
+			  {
+			     border:1px solid black;
+			     background-color:#E8A317;
+				 text-decoration:none;
+				 color:white;
+				 padding:5px;
+			  }
+			  #map
+			  {
+			     border:1px solid black;
+			     background-color:#E8A317;
+				 color:white;
+				 text-decoration:none;
+				 padding:5px;
+				 float:right;
+				 left:0;
+			  }
+
+			  
+		
+			</style>
+			
+	 </head>
+	 <body>
+	    <table>
+		  <tr>
+	       <td> <a href="Buses.html" id="back">&#x2190 Back</a></td>
+		   <td><a href="Map.html" id="map">View Map</a></td>
+		 </tr>
+		</table><br><br>
+	    <marquee direction="left" behavior="scroll" bgcolor="#E8A317">
+	    <h1 id="header">SEARCH YOUR BUSES WITH CHALO BY CLICKING THE BUS NUMBERS</h1>
+		</marquee>
+	    <img src="bus.png" class="busImg"><br><br><br>
+		<span id='ct6' style="background-color:#E8A317"></span>
+	    <div class="bus">
+         <div class="busgrp">
+			     <button><b>27D</b><p>From Villivakkam to ForeShoreEstate</p><p>From ForeShoreEstate to Villivakkam </p><a href="27D.html" id="bus1">Click here to know details</a></button><br>
+				 <button><b>29C</b><p>From Perambur to Thiruvanmiyur</p><p>From Thiruvanmiyur to Perambur</p><a href="29C.html" id="bus2">Click here to know details</a></button><br>
+				 <button><b>23C</b><p>From Ayanavaram to Besant Nagar</p><p>From Besant Nagar to Ayanavaram</p><a href="23C.html" id="bus3">Click here to know details</a></button><br>
+				 <button><b>170C</b><p>From ThiruViKa Nagar to Guindy</p><p>From Guindy to ThiruViKa Nagar</p><a href="170C.html" id="bus4">Click here to know details</a></button><br>
+		 </div>
+		 <div class="busgrp">
+		         <button><b>15F</b><p>From Broadway to Vadapalani</p><p>From Vadapalani to Broadway </p><a href="15F.html" id="bus5">Click here to know details</a></button><br>
+				 <button><b>120</b><p>From Broadway to Avadi Terminal</p><p>From Avadi Terminal to Broadway</p><a href="120.html" id="bus6">Click here to know details</a></button><br>
+				 <button><b>142</b><p>From Perambur to VinayagaPuram</p><p>From VinayagaPuram to Perambur</p><a href="142.html" id="bus7">Click here to know details</a></button><br>
+				 <button><b>70</b><p>From Avadi Terminal to Tambaram West</p><p>From Tambaram West to Avadi Terminal</p><a href="70.html" id="bus8">Click here to know details</a></button><br>
+		 </div>
+     </div>
+	       <center>  <p id="footer">@CHALO &copy AllRightsReserved </p></center>
+	 </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+         <title>Buses</title>
+		 <style>
+		      
+			#livebus
+			{
+			  display:block;
+			  margin-left:auto;
+			  margin-right:auto;
+	          width:50%;
+			}
+			#one{
+			  width:1450px;
+			}
+			#start
+			{
+			  text-align:center;
+			  background-color:#E8A317;
+			  border:1px solid black;
+			  color:white;
+			  cursor:pointer;
+			  width:100%;
+			  display:block;
+			  padding:5px 10px;
+			}
+			.blink
+			{
+			  animation:blinker 1.5s linear infinite;
+			  color:#E8A317;
+			  float:left;
+			}
+			@keyframes blinker
+			{
+			 50%{
+			     opacity:0;
+				}
+			}
+			a{
+			  text-decoration:none;
+			}
+			#back
+			{
+			  float:left;
+			  font-size:15px;
+			  text-decoration:none;
+			  background-color:#E8A317;
+			}
+		</style>
+		
+   </head>
+   <body>
+    <h1 class="blink"><a href="menu.html"id="back">&#x2190 BACK</a><br><u>TRY CHALO</u></h1>
+	<img  id="one" src="trychalo.png"><br><br>
+   <img src="livebus.png" id="livebus">
+   <a href="Route.html" id="start"><b>GET STARTED</b></a>
+   </body>
+</html>

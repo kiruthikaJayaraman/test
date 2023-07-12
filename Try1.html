@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+   <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">-->
+    
+    <title>3D Sidebar navigation menus on hover effect</title>
+	<style>
+	  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 14px;
+}
+ul.menu{
+    display: inline-block;
+    list-style: none;
+}
+li.menu_list{
+    height: 85px;
+    width: 150px;
+    position: relative;
+}
+li.menu_list .front,a.side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top:0;
+    left: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+li.menu_list .front{
+    background:#E8A317;
+    color:#FAF9F6;
+    transform-origin: 0 0;
+    font-size: 30px;
+}
+a.side{
+    background: #fffc00;
+    color: #34465d;
+    transform-origin: 0 0 85px;
+    transform: rotateY(-90deg);
+}
+li.menu_list:hover a.side{
+    transform: rotateY(0deg);
+}
+li.menu_list:hover .front{
+    transform: rotateY(90deg);
+}
+#one{
+  width:150px;
+  height:100px;
+}
+#two{
+  width:150px;
+  height:100px;
+}
+#three{
+  width:150px;
+  height:100px;
+}
+#four{
+  width:150px;
+  height:100px;
+}
+#five{
+  width:150px;
+  
+}
+#six{
+  width:150px;
+}
+#seven{
+  width:150px;
+}
+
+	</style>
+</head>
+<body>
+<ul class="menu">
+    <li class="menu_list">
+        <img id="one" src="3D1.png">
+        <a href="#" class="side">Home</a>
+    </li>
+    <li class="menu_list">
+        <img id="two" src="3D2.png">
+        <a href="#" class="side">Buses</a>
+    </li>
+    <li class="menu_list">
+        
+		<img id="three" src="3D3.png">
+        <a href="#" class="side">ChangeCity</a>
+    </li>
+    <li class="menu_list">
+        <img id="four" src="3D4.png">
+        <a href="#" class="side">ChangeLanguage</a>
+    </li>
+    <li class="menu_list">
+        <img id="five" src="3D5.png">
+        <a href="#" class="side">Support?</a>
+    </li>
+    <li class="menu_list">
+	<img id="six" src="3D6.png">
+        
+        <a href="#" class="side">contact</a>
+    </li>
+    <li class="menu_list">
+        <img id="seven" src="3D7.png">
+        <a href="#" class="side">Login</a>
+    </li>
+</ul>
+</body>
+</html>

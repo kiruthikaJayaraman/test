@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Animated Login Form</title>
+<style>
+  body {
+  margin:0px;
+  padding:0px;
+  font-family: sans-serif;
+  background:#FADA5E;
+   
+}
+ 
+.box {
+  width: 380px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius:20px;
+  transform: translate(-50%,-50%);
+  background:#111;
+  text-align: center;
+   
+}
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+ 
+.text-input {
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+ 
+ 
+.text-input:focus {
+  width: 250px;
+  border-color: #2ecc71;
+}
+ 
+.box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+ 
+.box input[type="submit"]:hover {
+  background: #2ecc71;
+}
+</style>
+</head>
+<body>
+<form class="box" name="myform" method="post"onsubmit="return vali(myform)" > 
+  <h1>LogIn</h1>
+  <input type="text" id="user" name="users" placeholder="Username" class="text-input" pattern="[A-Za-z -]{2,9}$" required>
+  <input type="password" id="psw" name="psw" placeholder="Password" class="text-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  required>
+  <input type="submit" name="" value="Login" >
+</form>
+
+				
+<script>
+   function vali(myform){
+   
+      var pass= document.getElementById("psw").value;
+	  
+	  if(pass.length >8){
+	    var u= document.getElementById("user").value;
+		  
+	     document.write('<html><style> h1{background-color:#FADA5E;}.more{padding:10px;border:none;outline:none;border-radius:50px;font-size:20px;cursor:pointer;background-color:#E8A317;}img{width:1458px;height:300px}')
+		 document.write('</style>');
+	    document.write('<body><center>')
+		document.write('<img src="img21.png">');
+		document.write('<h1>')
+		document.write("Welcome"+ " "+u+" "+" You are successfully logined");
+		document.write('</h1>');
+		
+		document.write('<br><a href="menu.html"><button class="more" type="submit">')
+		document.write("Try Chalo");
+		document.write('</button></a>');
+		
+		document.write('</center></body></html>');
+         //window.location.href="menu.html";
+	     
+	  }
+	  else{
+	   alert("Your password length should minimum 8");
+	  }
+   }
+</script>
+
+</body>
+</html>+
